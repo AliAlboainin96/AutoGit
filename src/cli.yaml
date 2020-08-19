@@ -3,15 +3,25 @@ version: "0.1"
 author: Ali Alboainin
 about: Automate the long process of creating a local git repo and publishing it to github 
 args:
-  - lang:
-      short: l
-      long: lang
-      default_value: none
+  - language:
+      short: lang
+      long: language
+      default_value: false
       takes_value: true
       possible_values:
-        - none
         - cpp
         - c
         - python
         - rust
-  
+  - license:
+      short: lic
+      long: license
+      default_value: false
+      takes_value: true
+      possible_values:
+          - GPLv3
+          - AGPLv3
+          - LGPLv3
+          - MOZILLA-PUBLIC-LICENSE-2
+          - MIT
+          - APACHE-2

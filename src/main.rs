@@ -11,29 +11,31 @@ fn main() {
     let yaml = load_yaml!("cli.yaml");
     let matches = App::from_yaml(yaml).get_matches();
 
-    match matches.value_of("lang").unwrap() {
-        "none" => println!("No Language have been selected!"),
-        
+    match matches.value_of("language").unwrap() {
         "cpp" => 
         {
-            println!("Hello");
+            println!("Setting up language=C++");
         },
         
         "c" => 
         {
-            println!("مرحبا");
+            println!("Setting up language=C");
         },
 
         "rust" =>
         {
-            println!("Hallo");
+            println!("Setting up language=Rust");
         },
 
         "python" => 
         {
-            println!("Pythos goes brrr....");
+            println!("Setting up language=Python");
         },
         
-        _ => unreachable!("see possible_values in yaml, handled by clap"),
+        _ => unreachable!("No language have been selected!"),
+    };
+
+    match matches.value_of("License").unwrap() { 
+    "
     };
 }
