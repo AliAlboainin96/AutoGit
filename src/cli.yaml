@@ -2,23 +2,25 @@ name: AutoGit
 version: "0.1"
 author: Ali Alboainin
 about: Automate the long process of creating a local git repo and publishing it to github 
+
+settings:
+    - ArgRequiredElseHelp
 args:
   - language:
-      short: lang
-      long: language
-      default_value: false
+      help: Generate .gitignore template based on the language used
+      long: lang
       takes_value: true
       possible_values:
         - cpp
         - c
         - python
         - rust
-  - license:
-      short: lic
+    - licen:
+      help: Generate LICENSE for the owner of the project
       long: license
-      default_value: false
       takes_value: true
       possible_values:
+          - unlicense
           - GPLv3
           - AGPLv3
           - LGPLv3
