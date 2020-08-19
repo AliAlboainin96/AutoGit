@@ -1,0 +1,17 @@
+name: AutoGit 
+version: "0.1"
+author: Ali Alboainin
+about: Automate the long process of creating a local git repo and publishing it to github 
+args:
+  - lang:
+      short: l
+      long: lang
+      default_value: none
+      takes_value: true
+      possible_values:
+        - none
+        - cpp
+        - c
+        - python
+        - rust
+  
